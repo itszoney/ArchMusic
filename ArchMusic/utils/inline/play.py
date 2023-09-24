@@ -74,9 +74,13 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ), 
         ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏsᴇ", callback_data="close"
+            )
+        ],
     ]
     return buttons
-
 
 def telegram_markup_timer(_, chat_id, played, dur):
     bar = random.choice(selection)
@@ -104,6 +108,11 @@ def telegram_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(
                 text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏsᴇ", callback_data="close"
+            )
         ],
     ]
     return buttons
